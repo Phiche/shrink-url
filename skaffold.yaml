@@ -1,0 +1,15 @@
+apiVersion: skaffold/v2beta5
+kind: Config
+metadata:
+  name: shrink-url
+build:
+  artifacts:
+    - image: phichersandbox/shrink-url
+deploy:
+  helm:
+    releases:
+      - name: shrink-url
+        chartPath: ./shrink-chart
+        skipBuildDependencies: true
+        artifactOverrides:
+          image: phichersandbox/shrink-url

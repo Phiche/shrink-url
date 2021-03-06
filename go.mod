@@ -1,0 +1,5 @@
+module ru.phiche.shrink.url/api
+
+go 1.15
+
+require github.com/gin-gonic/gin v1.6.3
