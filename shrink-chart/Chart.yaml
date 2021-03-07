@@ -21,3 +21,11 @@ version: 0.0.1
 # incremented each time you make changes to the application. Versions are not expected to
 # follow Semantic Versioning. They should reflect the version the application is using.
 appVersion: 1.16.0
+
+dependencies:
+  - name: cassandra
+    version: 7.x.x
+    repository: https://charts.bitnami.com/bitnami
+    condition: cassandra.enabled
+    tags:
+      - arch-database

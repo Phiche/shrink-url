@@ -40,6 +40,17 @@ service:
   type: NodePort #ClusterIP
   port: 80
 
+cassandra:
+  enabled: true
+  service:
+    type: NodePort
+  jvm:
+    maxHeapSize: 1024m
+    newHeapSize: 800m
+  dbUser:
+    user: admin
+    password: password
+
 ingress:
   enabled: false
   annotations: {}
